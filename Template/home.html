@@ -1,0 +1,40 @@
+
+<div class="row">
+    <a href="create">Create Your Poll</a>
+    <a href="createuser">Create Your Writer</a>
+    <div class="col-lg-8 col-lg-offset-2">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h3 class="panel-title">Available Polls</h3>
+            </div>
+               {% if user is not None %}
+               {{user.id}}
+               {% endif %}
+
+            <ul class="list-group">
+                {% for poll in polls %}
+                <li class="list-group-item">
+
+
+                    <strong>{{ poll.question }}</strong>
+                    <span class="pull-right">
+
+                        <a href="vote/{{poll.writer.id}}/" class="btn btn-info btn-xs">Vote</a> &nbsp;
+                        <a href="/results/{{poll.writer.id}}" class="btn btn-default btn-xs">View Results</a> &nbsp;
+                    </span> -----------writer/-------{{ poll.writer }}
+                     -----------Total No of Votes-!!!/-------{{ poll.total }}
+                </li>
+                </li>
+                {% endfor %}
+            </ul>
+
+        </div>
+    </div>
+</div>
+
+<style type="text/css">
+    a{
+        margin: 10px;
+        
+    }
+</style>

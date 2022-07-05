@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>
+		
+	</title>
+</head>
+<body>
+<div >
+	
+	<table class="border">
+		<form action="" method="POST">
+		{% csrf_token %}
+		<h1>Welcome to Login Page <a href="/">Home</a> </h1>
+		<h2>Name</h2>
+		<input type="text" name="username"  class="h2" required="True"><br>
+		<h2>Password</h2>
+		<input type="text" name="password" class="h3"  required="True"><br><br>
+
+
+		
+		<button type="submit"  class="sucess">submit</button>
+	</form>
+	</table>
+
+</div>
+</body>
+<style type="text/css">
+	.h2,h2,button{
+		margin-left: 400px;	
+		
+	}
+	.topping{
+		margin-top: 100px
+	}
+	body{
+		background-color: lightgrey;
+		border-width: 10px
+	}
+	.h3,h3{
+		margin-left: 400px
+	}
+	.sucess{
+		background-color: lightgreen;
+		border-width: 3px;
+		width: 200px
+	}
+	
+</style>
+
+</html>
